@@ -1,7 +1,0 @@
-/Users/satishkumarsubudhi/MicroserviceProject/microservice-parent/product-service/src/main/java/com/satish/productservice/ProductserviceApplication.java
-/Users/satishkumarsubudhi/MicroserviceProject/microservice-parent/product-service/src/main/java/com/satish/productservice/service/ProductService.java
-/Users/satishkumarsubudhi/MicroserviceProject/microservice-parent/product-service/src/main/java/com/satish/productservice/repository/ProductReposistory.java
-/Users/satishkumarsubudhi/MicroserviceProject/microservice-parent/product-service/src/main/java/com/satish/productservice/dto/ProductRequest.java
-/Users/satishkumarsubudhi/MicroserviceProject/microservice-parent/product-service/src/main/java/com/satish/productservice/dto/ProductResponse.java
-/Users/satishkumarsubudhi/MicroserviceProject/microservice-parent/product-service/src/main/java/com/satish/productservice/controller/ProductController.java
-/Users/satishkumarsubudhi/MicroserviceProject/microservice-parent/product-service/src/main/java/com/satish/productservice/model/Product.java

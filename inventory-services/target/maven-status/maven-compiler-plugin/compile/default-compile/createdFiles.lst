@@ -1,7 +1,0 @@
-com/satish/inventoryservice/repository/InventoryRepository.class
-com/satish/inventoryservice/InventoryServiceApplication.class
-com/satish/inventoryservice/controller/InventoryController.class
-com/satish/inventoryservice/dto/InventoryResponse.class
-com/satish/inventoryservice/model/Inventory.class
-com/satish/inventoryservice/dto/InventoryResponse$InventoryResponseBuilder.class
-com/satish/inventoryservice/service/InventoryService.class
