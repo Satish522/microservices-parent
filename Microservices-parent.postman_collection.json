@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "50e9eb14-0da9-4c5d-8f48-06216acc60a6",
+		"name": "Microservices-parent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4290569"
+	},
+	"item": [
+		{
+			"name": "localhost:8084/api/product",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYckEyQUtseWtvelhGTzFGMWFPNW0yZmZrWkVrMVVsRk1feWtfRTljVFBJIn0.eyJleHAiOjE3MDgzNjg4ODMsImlhdCI6MTcwODI4MjQ4MywianRpIjoiNjg4NTkyM2UtODAzNC00ODI3LTliOWEtN2ExNGFhNWFjN2UxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zcHJpbmctYm9vdC1taWNyb3NlcnZpY2VzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6Ijg5MWIxYzZlLThjYTYtNGYxMi1hMjA2LTU4ODgwZGYxN2ZmNiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNwcmluZy1ib290LWNsb3VkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1zcHJpbmctYm9vdC1taWNyb3NlcnZpY2VzIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUgb2ZmbGluZV9hY2Nlc3MiLCJjbGllbnRIb3N0IjoiMDowOjA6MDowOjA6MDoxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtc3ByaW5nLWJvb3QtY2xvdWQiLCJjbGllbnRBZGRyZXNzIjoiMDowOjA6MDowOjA6MDoxIiwiY2xpZW50X2lkIjoic3ByaW5nLWJvb3QtY2xvdWQifQ.Y_Wc8bdjXoxc5xEND_c_BFuEMaO1x0ypDrnE8c1HNzUvBbWnUvvS-LWB5j66eYc0jYCRWfJPRVw2SSdM5OEvZ4sW_hlBiGkJDCeRDP9mwBJF4ikuqiY5lrF0yGXluE1t9XANlbKK4IvBIeepyYF8M3P9Hml3JuncxJVnmRbfWt_mInkoFJdGjH_J_2d6BiieQo2lOzmSCE6b9K4UpPaWYotyKqHwaO72alLaKsxIvtfbIPZkzq1zTkHYTL13lmEw_Ah0Qe0ZDWa9BgnLMcRllDIrWlh2DYUzWW88reaKCh2xq1AIXY8kkJOOrQrII5egKSClI_e15v8lPSOCoup-MA",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "refresh_token",
+							"type": "any"
+						},
+						{
+							"key": "expires_in",
+							"value": 86400,
+							"type": "number"
+						},
+						{
+							"key": "token_id",
+							"value": "33ed4d8a-a194-4194-907f-5f41b92c3f45",
+							"type": "string"
+						},
+						{
+							"key": "timestamp",
+							"value": 1708282483222,
+							"type": "number"
+						},
+						{
+							"key": "clientSecret",
+							"value": "gUY3hS6nghP2WozLNnF0TLkaTvYXiREC",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "spring-boot-cloud",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8181/realms/spring-boot-microservices/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid offline_access",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "id",
+							"value": "request/58f12336-60ea-4d70-a757-98f2cfbd7ea8/29ba1c6f-43ab-4e23-8a6c-27c39a57a069",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/api/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8084/api/inventory?skuCode=iphone_13",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYckEyQUtseWtvelhGTzFGMWFPNW0yZmZrWkVrMVVsRk1feWtfRTljVFBJIn0.eyJleHAiOjE3MDgxOTM0ODAsImlhdCI6MTcwODEwNzA4MCwianRpIjoiMzlmNjExMzAtY2NmOS00MDhlLThkOTktMTJjYmE3OTBlZjVjIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zcHJpbmctYm9vdC1taWNyb3NlcnZpY2VzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6Ijg5MWIxYzZlLThjYTYtNGYxMi1hMjA2LTU4ODgwZGYxN2ZmNiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNwcmluZy1ib290LWNsb3VkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1zcHJpbmctYm9vdC1taWNyb3NlcnZpY2VzIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUgb2ZmbGluZV9hY2Nlc3MiLCJjbGllbnRIb3N0IjoiMDowOjA6MDowOjA6MDoxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtc3ByaW5nLWJvb3QtY2xvdWQiLCJjbGllbnRBZGRyZXNzIjoiMDowOjA6MDowOjA6MDoxIiwiY2xpZW50X2lkIjoic3ByaW5nLWJvb3QtY2xvdWQifQ.iiAdBxxCnaq-o1ypu4_I2gkutBmnv825TueJRR6c9CLFDrh8o36aT4JN-wYPsDeimOMo9Hc3dCbl0ADMP8ykDjBcpqtJaXd4JE5WkbrKTmtk3OrKITbOBljWy11K98FkU6MA7GDcizOoy4axXiMnOfbE-EJXDHO3P2O3VD7-JTmfGFQAdo5lfT3cvjlBGVwmscBLSFOLzq5liL9IKXKlt-P60pJnBhj8TomGZEUJueQPI4UDuTBZSzd1CGVx1vFqpvAwDhLL1UrQPzAmJXcM_OFU0Yll-1VyJqFGZQ4qeSL0uPlSrf1AlPeEdsCPHW1L0h6IkzxAATUkmkOOZ6OyYA",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "refresh_token",
+							"type": "any"
+						},
+						{
+							"key": "expires_in",
+							"value": 86399,
+							"type": "number"
+						},
+						{
+							"key": "token_id",
+							"value": "0e159c6b-1d49-4072-89f5-056cf92c9417",
+							"type": "string"
+						},
+						{
+							"key": "timestamp",
+							"value": 1708107081126,
+							"type": "number"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8181/realms/spring-boot-microservices/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "gUY3hS6nghP2WozLNnF0TLkaTvYXiREC",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "spring-boot-cloud",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid offline_access",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "id",
+							"value": "request/e1a36b77-291d-4e78-a7d1-cddd20a53e78/29ba1c6f-43ab-4e23-8a6c-27c39a57a069",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/api/inventory?skuCode=iphone_13",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"inventory"
+					],
+					"query": [
+						{
+							"key": "skuCode",
+							"value": "iphone_13"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8084/api/order",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJYckEyQUtseWtvelhGTzFGMWFPNW0yZmZrWkVrMVVsRk1feWtfRTljVFBJIn0.eyJleHAiOjE3MDgxOTgxOTMsImlhdCI6MTcwODExMTc5MywianRpIjoiMWUxMjQ0MTUtZTYxNC00ZjQ2LWIxYjYtMTcyNzJjYzk2M2ViIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9zcHJpbmctYm9vdC1taWNyb3NlcnZpY2VzIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6Ijg5MWIxYzZlLThjYTYtNGYxMi1hMjA2LTU4ODgwZGYxN2ZmNiIsInR5cCI6IkJlYXJlciIsImF6cCI6InNwcmluZy1ib290LWNsb3VkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1zcHJpbmctYm9vdC1taWNyb3NlcnZpY2VzIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUgb2ZmbGluZV9hY2Nlc3MiLCJjbGllbnRIb3N0IjoiMDowOjA6MDowOjA6MDoxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtc3ByaW5nLWJvb3QtY2xvdWQiLCJjbGllbnRBZGRyZXNzIjoiMDowOjA6MDowOjA6MDoxIiwiY2xpZW50X2lkIjoic3ByaW5nLWJvb3QtY2xvdWQifQ.Y7f29p5xqijhhwX8wWlgCEYJdjnnvrGC7RiqJtdYAds0jdotqWrf1yB23S3HmU_JDudfOMpOMmQB9vw3QeWXpm3hKUrEV7SD3pDQlspTXPVAbIh5owgT5lnR6rz4g1cFGE9cGIhEtCdXJP3yeMDPOJIiOPxtYEAW9c-AkduSAFRyHM0ZzBUUL3NRgZNYuWJKWAQoiV3IIzSkLL-jTn-7Q4elE88p5kTP2cmlNGndNE9ZFn2pcRZ5kGUv85NBIHX3MnRqwC9k1pShXyMGUZAaGF5GuRpwpyuPpdXmo8lKiVXSFcg8xo9pwFkYlDjHv6S8th2QA0nDcPspIsar_61WcQ",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "refresh_token",
+							"type": "any"
+						},
+						{
+							"key": "expires_in",
+							"value": 86400,
+							"type": "number"
+						},
+						{
+							"key": "token_id",
+							"value": "95a00245-a89a-4597-93fc-8aa576bd22a0",
+							"type": "string"
+						},
+						{
+							"key": "timestamp",
+							"value": 1708111793099,
+							"type": "number"
+						},
+						{
+							"key": "clientSecret",
+							"value": "gUY3hS6nghP2WozLNnF0TLkaTvYXiREC",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "spring-boot-cloud",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8181/realms/spring-boot-microservices/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid offline_access",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "id",
+							"value": "request/dc14b397-5ef2-4bc5-848d-14a2b7b073ce/29ba1c6f-43ab-4e23-8a6c-27c39a57a069",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderLineItemDto\" : [\n        {\n            \"skuCode\" : \"iphone_13\",\n            \"price\" : 102000,\n            \"quantity\" : 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8084/api/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8084/api/product",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientId",
+							"value": "spring-boot-cloud",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "gUY3hS6nghP2WozLNnF0TLkaTvYXiREC",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "http://localhost:8181/realms/spring-boot-microservices/protocol/openid-connect/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Vivo 20\",\n    \"description\" : \"Vivo 20 \",\n    \"price\" : 32000\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8084/api/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
