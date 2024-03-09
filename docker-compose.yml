@@ -8,7 +8,7 @@ services:
     environment: 
       POSTGRES_DB: order-service
       POSTGRES_USER: satish
-      POSTGRES_PASSOWRD: password
+      POSTGRES_PASSWORD: password
       PGDATA: /data/postgres
     volumes: 
       - ./postgres-order:/data/postgres
@@ -25,7 +25,7 @@ services:
     environment: 
       POSTGRES_DB: inventory-service
       POSTGRES_USER: satish
-      POSTGRES_PASSOWRD: password
+      POSTGRES_PASSWORD: password
       PGDATA: /data/postgres
     volumes: 
       - ./postgres-inventory:/data/postgres
@@ -46,36 +46,23 @@ services:
       - ./mongo-data:/data/db
       
   ## Keycloak Config with Mysql database
-#  keycloak-mysql:
-#    container_name: keycloak-mysql
-#    image: mysql:5.7
-#    volumes:
-#      - ./mysql_keycloak_data:/var/lib/mysql
-#    environment:
-#      MYSQL_ROOT_PASSWORD: ROOT
-#      MYSQL_DATABSE: keycloak
-#      MYSQL_USER: keycloak
-#      MYSQL_PASSWORD: password
       
   keycloak:
     container_name: keycloak
-    image: bitnami/keycloak:latest
-    command: [ "start-dev", "--import-realm" ]
-    environment:
-      DB_VENDOR: mysql
-      DB_ADDR: mysql
-      DB_DATABASE: keycloak
-      DB_USER: keycloak
-      DB_PASSWORD: password
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
+    image: jboss/keycloak
+    command: 
+      - " -b 0.0.0.0"
     ports:
-      - "8181:8080"
+      - "8080:8080"
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - KEYCLOAK_IMPORT=/tmp/realm-export-jboss-keycloak.json
+    #networks:
+    #  - keycloak_network
     volumes:
-      - ./realms/:/docker-entrypoint-initdb.d
-   # depends_on:
-    #  - keycloak-mysql
-      
+      - ./realms/realm-export-jboss-keycloak.json:/tmp/realm-export-jboss-keycloak.json
+          
   ## Zookeeper and Kafka configuration
   zookeeper:
     container_name: zookeeper
@@ -112,27 +99,21 @@ services:
   ## Eureka Server
   discovery-server:
     container_name: discovery-server
-    image: satish2121/discovery-servers:latest
-    platform: linux/amd64
-    pull_policy: always
+    image: satish2121/discovery-servers:arm64
     ports:
       - "8761:8761"
     environment:
-      - SPRING_PROFILE_ACTIVE=docker
+      - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - zipkin
   
   api-gateway:
     container_name: api-gateway
-    image: satish2121/api-gateways:latest
-    platform: linux/amd64
-    pull_policy: always
+    image: satish2121/api-gateways:arm64
     ports:
-      - "8182:8080"
-    expose:
-      - "8182"
+      - "8182:8084"
     environment:
-      - SPRING_PROFILE_ACTIVE=docker
+      - SPRING_PROFILES_ACTIVE=docker
       - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY= TRACE
     depends_on:
       - zipkin
@@ -142,8 +123,8 @@ services:
   ## Product-Service Docker Compose Config
   product-service:
     container_name: product-service
-    image: satish2121/product-service:latest
-    platform: linux/amd64
+    image: satish2121/product-service:arm64
+    #platform: linux/amd64
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
@@ -154,8 +135,8 @@ services:
   ## Order-Service Docker Compose Config
   order-service:
     container_name: order-service
-    image: satish2121/order-services:latest
-    platform: linux/amd64
+    image: satish2121/order-services:arm64
+    #platform: linux/amd64
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-order:5431/order-service
@@ -169,8 +150,8 @@ services:
   ## Inventory-Service Docker Compose Config
   inventory-service:
     container_name: inventory-service
-    image: satish2121/inventory-services:latest
-    platform: linux/amd64
+    image: satish2121/inventory-services:arm64
+    #platform: linux/amd64
     environment:
       - SPRING_PROFILES_ACTIVE=docker
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-inventory:5432/inventory-service
@@ -182,8 +163,8 @@ services:
   ## Notification-Service Docker Compose Config
   notification-service:
     container_name: notification-service
-    image: satish2121/notification-services:latest
-    platform: linux/amd64
+    image: satish2121/notification-services:arm64
+    #platform: linux/amd64
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:

@@ -1,5 +1,6 @@
 package com.satish.apigateway.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
@@ -12,6 +13,9 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 @EnableWebFluxSecurity
 public class SecurityConfig {
 
+	@Value("${spring.security.oauth2.resourceserver.jwt.issuer-uri}")
+	private String issuerUri;
+	
 	@Bean
 	public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity serverHttpSecurity) {
 		
@@ -27,7 +31,7 @@ public class SecurityConfig {
 	
 	@Bean
     public ReactiveJwtDecoder jwtDecoder() {
-        return ReactiveJwtDecoders.fromIssuerLocation("http://localhost:8181/realms/spring-boot-microservices");
+        return ReactiveJwtDecoders.fromIssuerLocation(issuerUri);
     }
 	
 }

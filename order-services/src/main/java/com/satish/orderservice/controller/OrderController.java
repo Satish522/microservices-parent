@@ -29,7 +29,6 @@ public class OrderController {
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public String placeOrder(@RequestBody OrderRequest orderRequest) {
 		return  orderService.placeOrder(orderRequest);
-		
 	}
 	
 	public CompletableFuture<String> fallbackMethod(OrderRequest orderRequest, RuntimeException runtimeException) {
